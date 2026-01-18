@@ -83,6 +83,7 @@ h4{
 @media (max-width: 480px) {
   .filter{
     flex-direction: column;
+    width: 100%;
   }
   h3{
     font-size: 24px;
@@ -161,7 +162,6 @@ display: none;
   }
 
   .item-content h4{
-    font-size: 20px;
     width: 330px;
   }
   .item-content{

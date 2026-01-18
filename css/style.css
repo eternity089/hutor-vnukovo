@@ -299,6 +299,10 @@ input[type="date"]{
   background: white;
 }
 
+input:focus{
+  outline-color: var(--hover-color);
+}
+
 /* шапка */
 
 header {

@@ -26,6 +26,24 @@
       <button class="modal main-offer" data-modal="modal.html">Забронировать</button>
     </div>
   </header>
+  <div class="mobile-menu-container">
+    <div class="mobile-menu">
+      <div class="close">
+        <button class="close close-btn"><img src="../img/icons/close.png" alt=""></button>
+      </div>
+      <nav class="nav-mobile">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="price.html">Услуги</a></li>
+        <li><a href="rules.html">Правила</a></li>
+        <li><a href="history.html">История</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+
+        <button class="modal mobile-offer main-offer">Забронировать</button>
+      </nav>
+    </div>
+    <div class="overlay"></div>
+  </div>
   <template id="modal-template">
     <div class="modal-overlay" id="modal">
       <div class="modal-window">
@@ -86,7 +104,9 @@
           </div>
           <div class="contact map">
             <img src="../img/icons/map.png" alt="map-geo">
-            <h3><a href="https://yandex.ru/maps/geo/khutor_vnukovo/53145609/?from=mapframe&ll=42.744024%2C59.933393&z=16">Как добраться</a></h3>
+            <h3><a
+                href="https://yandex.ru/maps/geo/khutor_vnukovo/53145609/?from=mapframe&ll=42.744024%2C59.933393&z=16">Как
+                добраться</a></h3>
           </div>
           <div class="contact social">
             <img src="../img/icons/social.png" alt="vk">
@@ -115,7 +135,7 @@
           <li><a href="../html/gallery.html">Галерея</a></li>
           <li><a href="../html/contacts.html">Контакты</a></li>
         </nav>
-        <button class="modal header-offer">Забронировать</button>
+        <!-- <button class="modal header-offer">Забронировать</button> -->
       </div>
     </div>
     <div class="footer-info">
@@ -126,7 +146,7 @@
       ©Хутор Внуково, 2026г.
     </div>
   </footer>
-   <script src="../js/modal.js"></script>
+  <script src="../js/modal.js"></script>
 </body>
 
 </html>

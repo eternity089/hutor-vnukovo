@@ -156,7 +156,7 @@ display: none;
 }
 
 @media (max-width: 768px) {
-  .breadcrumb{
+  .breadcrumbs{
     margin-left: 6vw;
   }
   .slide{

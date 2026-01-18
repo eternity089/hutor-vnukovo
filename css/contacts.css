@@ -5,6 +5,19 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.burger span,
+.burger span::before,
+.burger span::after {
+  width: 25px;
+  background: var(--h-color);
+  height: 3px;
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+
 .contact-map{
   width: 60%;
 
@@ -33,6 +46,27 @@
   color: var(--h-color);
   position: relative;
   font-size: 24px;
+}
+
+@media (max-width: 480px) {
+
+  .contact a{
+    font-size: 18px;
+  }
+  .contact img{
+    width: 40px;
+    height: 40px;
+  }
+  .contacts-container{
+    flex-direction: column;
+  }
+  .contact-map, iframe{
+    width: 100%;
+    margin-top: 40px;
+  }
+  iframe{
+    height: 350px;
+  }
 }
 
 

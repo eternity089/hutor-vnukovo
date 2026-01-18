@@ -295,6 +295,10 @@ a:hover::after{
   color: black;
 }
 
+input[type="date"]{
+  background: white;
+}
+
 /* шапка */
 
 header {

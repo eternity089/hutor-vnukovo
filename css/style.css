@@ -479,6 +479,9 @@ main {
 }
 
 @media (max-width: 480px) {
+  .nav-mobile{
+    gap: 8vh;
+  }
   header{
     padding: 0;
   }

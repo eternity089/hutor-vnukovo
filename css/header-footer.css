@@ -1,0 +1,26 @@
+:root {
+  --h-color: #CA8E5D;
+  --border-color: #ca8e5dab;
+  --bg-color: #FFF3EA;
+  --body-color: #B1A79F;
+  --hover-color: #A26E44;
+  --input-color:#674327;
+  letter-spacing: 1px;
+}
+header{
+  background: white;
+}
+button{
+  letter-spacing: 1px;
+}
+
+
+header li a{
+  font-weight: 300;
+  color: var(--h-color);
+
+}
+
+main{
+  margin-top: 150px;
+}

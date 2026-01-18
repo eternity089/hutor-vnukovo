@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/contacts.css">
+  <link rel="stylesheet" href="../css/header-footer.css">
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <img src="../img/logo.png" alt="logo">
+      <nav>
+        <li><a href="../index.html">Главная </a></li>
+        <li><a href="price.html">Услуги </a></li>
+        <li><a href="rules.html"> Правила </a></li>
+        <li><a href="history.html"> История </a></li>
+        <li><a href="gallery.html"> Галерея </a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </nav>
+      <button class="modal main-offer" data-modal="modal.html">Забронировать</button>
+    </div>
+  </header>
+  <template id="modal-template">
+    <div class="modal-overlay" id="modal">
+      <div class="modal-window">
+        <div class="modal-header">
+          <h2>Бронирование</h2>
+          <button class="close close-btn"><img src="../img/icons/close.png" alt=""></button>
+        </div>
+        <div class="modal-content">
+          <form action="" id="form">
+            <input type="text" name="name" placeholder="Фамилия Имя" required>
+            <input type="tel" name="phone" id="" placeholder="Номер телефона" required>
+            <div class="content-date-count">
+              <div class="check-content">
+                <input type="date" name="check_in" value="" id="" required>
+                <span class="placeholder">Заезд</span>
+              </div>
+              <div class="check-content">
+                <input type="date" name="check_out" value="" id="" required>
+                <span class="placeholder">Выезд</span>
+              </div>
+            </div>
+            <input type="number" name="count_guest" id="" min="1" max="6" step="1"
+              placeholder="Количество человек (до 6)">
+            <button class="main-offer" type="submit">Отправить заявку</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </template>
+  <template id="modal-success-template">
+    <div class="modal-overlay" id="modal-success">
+      <div class="modal-window">
+        <div class="modal-header">
+          <h2>Успех</h2>
+          <button class="close close-btn"><img src="../img/icons/close.png" alt=""></button>
+        </div>
+        <div class="modal-content">
+          <p>Заявка была успешно отправлена. В ближайшее время Вам позвонят для уточнения деталей.</p>
+          <p>По всем вопросам можно обращаться по номеру <a href="tel:+79517481892" onclick="this.select()">+7 (981)
+              438-41-61</a> или в <a href="https://vk.com/hutor_vnukovo?from=groups">личные сообщения сообщества</a></p>
+        </div>
+      </div>
+    </div>
+  </template>
+  <main>
+    <nav class="breadcrumbs">
+      <a href="../index.html">Главная</a>
+      <span>/</span>
+      <span class="current">Контакты</span>
+    </nav>
+    <section class="contacts">
+      <div class="contacts-container">
+        <div class="contacts-content">
+          <h2>Контакты</h2>
+          <div class="contact phone">
+            <img src="../img/icons/phone.png" alt="phone">
+            <h3><a href="tel:+79814384161">+7 (981) 438-41-61</a></h3>
+          </div>
+          <div class="contact map">
+            <img src="../img/icons/map.png" alt="map-geo">
+            <h3><a href="https://yandex.ru/maps/geo/khutor_vnukovo/53145609/?from=mapframe&ll=42.744024%2C59.933393&z=16">Как добраться</a></h3>
+          </div>
+          <div class="contact social">
+            <img src="../img/icons/social.png" alt="vk">
+            <h3><a href="https://vk.com/hutor_vnukovo?from=groups">Мы ВКонтакте</a></h3>
+          </div>
+        </div>
+        <div class="contact-map">
+          <div style="position:relative;overflow:hidden;"><iframe
+              src="https://yandex.ru/map-widget/v1/?ll=42.745732%2C59.933454&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzE0NTYwORKIAdCg0L7RgdGB0LjRjywg0JLQvtC70L7Qs9C-0LTRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwg0KLQvtGC0LXQvNGB0LrQuNC5INC80YPQvdC40YbQuNC_0LDQu9GM0L3Ri9C5INC-0LrRgNGD0LMsINGF0YPRgtC-0YAg0JLQvdGD0LrQvtCy0L4iCg0F-CpCFVS8b0I%2C&z=16.14"
+              allowfullscreen="true" style="position:relative;" loading="lazy"></iframe></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="footer">
+        <img src="../img/logo.png" alt="logo">
+        <nav>
+          <li><a href="../index.html">Главная</a></li>
+          <li><a href="../html/price.html">Услуги</a></li>
+          <li><a href="../html/rules.html">Правила</a></li>
+        </nav>
+        <nav>
+          <li><a href="../html/history.html">История</a></li>
+          <li><a href="../html/gallery.html">Галерея</a></li>
+          <li><a href="../html/contacts.html">Контакты</a></li>
+        </nav>
+        <button class="modal header-offer">Забронировать</button>
+      </div>
+    </div>
+    <div class="footer-info">
+      <div class="vk-group">
+        <img src="../img/icons/vk.png" alt="">
+        <a href="https://vk.com/hutor_vnukovo?from=groups">Мы ВКонтакте</a>
+      </div>
+      ©Хутор Внуково, 2026г.
+    </div>
+  </footer>
+   <script src="../js/modal.js"></script>
+</body>
+
+</html>

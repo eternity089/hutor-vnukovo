@@ -1,0 +1,172 @@
+
+h4{
+  color: var(--input-color);
+}
+
+h3{
+  font-family: infant;
+  font-size: 36px;
+  color: var(--h-color);
+  line-height: 70px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+h4{
+  font-family: inter;
+  font-size: 22px;
+  line-height: 200%;
+  font-weight: 300;
+  margin: 0;
+}
+
+.burger span,
+.burger span::before,
+.burger span::after {
+  width: 25px;
+  background: var(--h-color);
+  height: 3px;
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
+
+.bath-container{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.room-container{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bath-content, .room-content{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+
+.filter{
+  width: 800px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.filter-count{
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+}
+
+
+@media (max-width: 768px) {
+  .bath-container{
+    flex-direction: column;
+  }
+  .bath-img img{
+    margin-top: 40px;
+    width: 100%;
+    height: 500px;
+  }
+  .filter{
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter{
+    flex-direction: column;
+  }
+  h3{
+    font-size: 24px;
+  }
+  h4{
+    font-size: 18px;
+  }
+  .bath-img img{
+    height: 350px;
+  }
+}
+
+.slider{
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  scroll-behavior: smooth;   /* вот это даёт «тач-ощущение» */
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.slider:active{
+  cursor: grabbing;
+}
+
+
+.slider::-webkit-scrollbar{
+display: none;
+}
+
+.slide{
+  flex: 0 0 40%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.items-container{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-item{
+  padding-bottom: 60px;
+}
+
+.item-content{
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  row-gap: 100px;
+}
+
+.item-content h4{
+  width: 390px;
+  color: var(--h-color);
+  border-bottom: 1px solid var(--h-color);
+}
+
+@media (max-width: 768px) {
+  .breadcrumb{
+    margin-left: 6vw;
+  }
+  .slide{
+    flex: 0 0 70%;
+  }
+
+  .item-content h4{
+    font-size: 20px;
+    width: 330px;
+  }
+  .item-content{
+    gap: 20px;
+    row-gap: 80px;
+  }
+}
+

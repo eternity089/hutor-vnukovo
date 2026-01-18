@@ -1,0 +1,38 @@
+.contacts-container{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-map{
+  width: 60%;
+
+}
+.contact-map iframe{
+  width: 100%;
+  height: 700px;
+  border: none;
+}
+.contacts-content{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.phone{
+  margin-top: 40px;
+}
+.contact{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.contact a{
+  color: var(--h-color);
+  position: relative;
+  font-size: 24px;
+}
+
+

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <img src="./img/logo3.png" alt="logo">
+      <button class="burger" aria-label="Открыть меню">
+        <span></span>
+      </button>
+
+      <nav>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="./html/price.html">Услуги</a></li>
+        <li><a href="./html/rules.html">Правила</a></li>
+        <li><a href="./html/history.html">История</a></li>
+        <li><a href="./html/gallery.html">Галерея</a></li>
+        <li><a href="./html/contacts.html">Контакты</a></li>
+      </nav>
+      <button class="modal header-offer">Забронировать</button>
+    </div>
+  </header>
+  <div class="mobile-menu">
+    <div class="close">
+      <button class="close close-btn"><img src="./img/icons/close.png" alt=""></button>
+    </div>
+    <nav class="nav-mobile">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="./html/price.html">Услуги</a></li>
+      <li><a href="./html/rules.html">Правила</a></li>
+      <li><a href="./html/history.html">История</a></li>
+      <li><a href="./html/gallery.html">Галерея</a></li>
+      <li><a href="./html/contacts.html">Контакты</a></li>
+
+      <button class="modal mobile-offer main-offer">Забронировать</button>
+    </nav>
+  </div>
+
+  <template id="modal-template">
+    <div class="modal-overlay" id="modal">
+      <div class="modal-window">
+        <div class="modal-header">
+          <h2>Бронирование</h2>
+          <button class="close close-btn"><img src="./img/icons/close.png" alt=""></button>
+        </div>
+        <div class="modal-content">
+          <form action="" id="form">
+            <input type="text" name="name" placeholder="Фамилия Имя" required>
+            <input type="tel" name="phone" id="" placeholder="Номер телефона" required>
+            <div class="content-date-count">
+              <div class="check-content">
+                <input type="date" name="check_in" value="" id="" required>
+                <span class="placeholder">Заезд</span>
+              </div>
+              <div class="check-content">
+                <input type="date" name="check_out" value="" id="" required>
+                <span class="placeholder">Выезд</span>
+              </div>
+            </div>
+            <input type="number" name="count_guest" id="" min="1" max="6" step="1"
+              placeholder="Количество человек (до 6)">
+            <button class="main-offer" type="submit">Отправить заявку</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </template>
+  <template id="modal-success-template">
+    <div class="modal-overlay" id="modal-success">
+      <div class="modal-window">
+        <div class="modal-header">
+          <h2>Успех</h2>
+          <button class="close close-btn"><img src="../img/icons/close.png" alt=""></button>
+        </div>
+        <div class="modal-content">
+          <p>Заявка была успешно отправлена. В ближайшее время Вам позвонят для уточнения деталей.</p>
+          <p>По всем вопросам можно обращаться по номеру <a href="tel:+79517481892" onclick="this.select()">+7 (981)
+              438-41-61</a> или в <a href="https://vk.com/hutor_vnukovo?from=groups">личные сообщения сообщества</a></p>
+        </div>
+      </div>
+    </div>
+  </template>
+  <main>
+    <section class="banner">
+      <h3>Место уединения с природой</h3>
+      <h1>Хутор внуково</h1>
+      <button class="modal header-offer">Забронировать</button>
+    </section>
+    <section class="about">
+      <div class="about-container">
+        <img src="./img/main-gallery/firstpage.png" alt="">
+        <div class="about-content">
+          <h2>О хуторе внуково</h2>
+          <p>Хутор Внуково — это уютный комплекс деревянных домиков и бань для тех, кто ценит тишину и единение с
+            природой. Мы создали идеальное место для отдыха от городской суеты, где можно наслаждаться панорамным видом
+            на живописную реку и бескрайний лес.
+            Приезжайте, чтобы провести время с близкими, попариться в бане с целебным ароматом дубового веника и
+            зарядиться энергией природы. Ваш идеальный отпуск начинается здесь!</p>
+        </div>
+      </div>
+    </section>
+    <section class="gallery">
+      <h2>Галерея счастливых моментов</h2>
+      <div class="gallery-container">
+        <div class="div1"><img src="./img/main-gallery/gallery1.png" loading="lazy" alt=""></div>
+        <div class="div2"><img src="./img/main-gallery/gallery2.png" loading="lazy" alt=""></div>
+        <div class="div3"><img src="./img/main-gallery/gallery3.png" loading="lazy" alt=""></div>
+        <div class="div4"><img src="./img/main-gallery/gallery4.png" loading="lazy" alt=""></div>
+        <div class="div5"><img src="./img/main-gallery/gallery5.png" loading="lazy" alt=""></div>
+        <div class="div6"><img src="./img/main-gallery/gallery6.png" loading="lazy" alt=""></div>
+        <div class="div7"><button class="main-offer">Галерея</button></div>
+      </div>
+    </section>
+    <section class="reviews">
+      <h2>Наша цель - ваши эмоции</h2>
+      <div class="reviews-container">
+        <div class="review">
+          <div class="stars">
+            <img src="./img/icons/star.png" alt="">
+          </div>
+          <div class="review-content">
+            <p>Каждая поездка сюда - это мини отпуск, мини приключение. Каждый раз - по разному. Хочешь активно - сапы,
+              велосипед, баня с купелью. Хочешь реалакса - уютный домик, кресла на террасе с видом на реку. Здесь каждый
+              найдёт то, что ему по душе. </p>
+          </div>
+        </div>
+        <div class="review">
+          <div class="stars">
+            <img src="./img/icons/star.png" alt="">
+          </div>
+          <div class="review-content">
+            <p>Решила в свой день рождения отдохнуть вдвоем с мужем от городской суеты. И не ошиблась с местом. Тихо,
+              спокойно, красиво! Чистый воздух, рядом река. В домике чисто и уютно. Не хватает коврика при входе и
+              шторки в ванной) Рекомендую 👍</p>
+          </div>
+        </div>
+        <div class="review">
+          <div class="stars">
+            <img src="./img/icons/star.png" alt="">
+          </div>
+          <div class="review-content">
+            <p>Отдыхали с подругами летом в этом чудесном местечке, брали два домика. Все понравилось, баня чистая,
+              светлая, купель отличная! В домиках есть всё необходимое для комфортного проживания! Кто хочет отдохнуть
+              от городской суеты, самое то. Рекомендую</p>
+          </div>
+        </div>
+        <div class="review">
+          <div class="stars">
+            <img src="./img/icons/star.png" alt="">
+          </div>
+          <div class="review-content">
+            <p>Лучшее место для отдыха в Тотьме. Природа -место силы, сервис - всегда чисто и уютно, как дополнение -
+              баня с индивидуальным парением. Любим к вам возвращаться❤️</p>
+          </div>
+        </div>
+        <div class="review">
+          <div class="stars">
+            <img src="./img/icons/star.png" alt="">
+          </div>
+          <div class="review-content">
+            <p>Отличное место для отдыха в уединении с природой, пением птиц, с шикарным видом на речку. Полный релакс
+              от городской суеты!!!</p>
+          </div>
+        </div>
+        <div class="review">
+          <div class="stars">
+            <img src="./img/icons/star.png" alt="">
+          </div>
+          <div class="review-content">
+            <p>Я охотник и часто бываю в Тотьме, последнее время останавливаюсь на хуторе Внуково, мне очень нравиться
+              сервис и наличие продуманной бани с купелью, все очень радует своей функциональностью, рекомендую это
+              место!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="faq">
+      <div class="faq-container">
+        <h2>Частые вопросы, которые у вас могут возникнуть</h2>
+        <div class="faq-content">
+          <details class="accordion">
+            <summary>Во сколько заезд и выезд?</summary>
+            <p>Заселение начинается с 14:00, выезд - до 11:30.</p>
+          </details>
+          <details class="accordion">
+            <summary>Можно ли с животными?</summary>
+            <p>Да, можно, но только с собаками. Доплата при этом - 1.000 рублей.</p>
+          </details>
+          <details class="accordion">
+            <summary>На сколько человек рассчитан домик?</summary>
+            <p>В домике есть 4 спальных места, с возможностью установить 2 дополнительных места.</p>
+          </details>
+          <details class="accordion">
+            <summary>Какое расстояние до Тотьмы?</summary>
+            <p>От Хутора до Тотьмы расстояние 3 километра.</p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <img src="./img/logo.png" alt="logo">
+      <div class="footer">
+
+        <nav>
+          <li><a href="./index.html">Главная</a></li>
+          <li><a href="./html/price.html">Услуги</a></li>
+          <li><a href="./html/rules.html">Правила</a></li>
+        </nav>
+        <nav>
+          <li><a href="./html/history.html">История</a></li>
+          <li><a href="./html/gallery.html">Галерея</a></li>
+          <li><a href="./html/contacts.html">Контакты</a></li>
+        </nav>
+        <button class="modal header-offer">Забронировать</button>
+      </div>
+    </div>
+    <div class="footer-info">
+      <div class="vk-group">
+        <img src="./img/icons/vk.png" alt="">
+        <a href="https://vk.com/hutor_vnukovo?from=groups">Мы ВКонтакте</a>
+      </div>
+      <p>©Хутор Внуково, 2026г.</p>
+    </div>
+  </footer>
+  <script src="./js/details.js"></script>
+  <script src="./js/modal.js"></script>
+</body>
+
+</html>

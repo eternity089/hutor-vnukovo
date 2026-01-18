@@ -885,7 +885,7 @@ footer nav {
 
 @media (max-width: 480px) {
   .footer-container{
-    gap: 20px;
+    gap: 10vw;
   }
   .footer{
     width: fit-content;
@@ -895,12 +895,12 @@ footer nav {
     gap: 40px;
   }
   .footer nav{
-    margin-top: 20px;
+    /* margin-top: 20px; */
     gap: 40px;
     align-items: center;
   }
   footer a{
-    font-size: 18px;
+    font-size: 16px;
   }
   .footer-info{
     margin-top: 40px;
@@ -908,6 +908,9 @@ footer nav {
     flex-direction: column;
   }
   .footer-info a, .footer-info p{
+    font-size: 16px;
+  }
+  .header-offer{
     font-size: 16px;
   }
 }

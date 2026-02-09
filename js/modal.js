@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /**
-   * Универсальная функция открытия модального окна
-   * @param {string} templateId - id template
+   * @param {string} templateId 
    */
   function openModal(templateId) {
     // если уже есть модалка — закрываем
@@ -52,12 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
       openModal('modal-reg');
     });
   }
-
-  // =========================
-  // КНОПКИ ОТКРЫТИЯ МОДАЛОК
-  // (десктоп + бургер)
-  // =========================
-
   const mobileMenu = document.querySelector('.mobile-menu');
 
   document.querySelectorAll('.open-reg, #openModalReg').forEach(btn => {
@@ -76,9 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // =========================
   // БУРГЕРНОЕ МЕНЮ
-  // =========================
 
   const burger = document.querySelector('.burger');
   const closeBtn = document.querySelector('.close');

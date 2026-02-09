@@ -317,4 +317,8 @@ article .main-offer{
   .buttons button{
     width: 100%;
   }
+
+  .nav-mobile{
+    gap: 55px;
+  }
 }

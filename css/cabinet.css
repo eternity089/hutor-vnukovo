@@ -82,6 +82,10 @@ article{
   padding: 15px;
   border: 1px solid var(--input-color);
 }
+
+.history{
+  width: 30vw;
+}
 #houseBlock .flex{
   display: flex;
   align-items: center;

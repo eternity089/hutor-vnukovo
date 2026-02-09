@@ -1,40 +1,48 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  /**
-   * @param {string} templateId 
-   */
+  // =========================
+  // Мобильное меню (бургер)
+  // =========================
+  const burger = document.querySelector('.burger');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const mobileMenuCloseBtn = document.querySelector('.mobile-menu-close-btn');
+
+  if (burger && mobileMenu && mobileMenuCloseBtn) {
+    burger.addEventListener('click', () => {
+      mobileMenu.classList.add('active');
+    });
+
+    mobileMenuCloseBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+    });
+  } else {
+    console.warn('Бургерное меню: один из элементов не найден на этой странице');
+  }
+
+  // =========================
+  // Функция открытия модалок
+  // =========================
   function openModal(templateId) {
-    // если уже есть модалка — закрываем
+    // закрываем уже открытые модалки
     const existingModal = document.querySelector('.modal-overlay');
     if (existingModal) existingModal.remove();
 
     const template = document.getElementById(templateId);
-    if (!template) {
-      console.error(`Template ${templateId} не найден`);
-      return;
-    }
+    if (!template) return;
 
     const fragment = template.content.cloneNode(true);
     const modal = fragment.querySelector('.modal-overlay');
     const closeBtn = fragment.querySelector('.close-btn');
-
-    if (!modal || !closeBtn) {
-      console.error('Модальное окно собрано некорректно');
-      return;
-    }
+    if (!modal || !closeBtn) return;
 
     document.body.appendChild(fragment);
 
     // закрытие по кнопке
-    closeBtn.addEventListener('click', () => {
-      modal.remove();
-    });
+    closeBtn.addEventListener('click', () => modal.remove());
 
-    // закрытие по клику на оверлей
+    // закрытие по клику вне окна
     modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.remove();
-      }
+      if (e.target === modal) modal.remove();
     });
 
     // переход на логин
@@ -51,13 +59,16 @@ document.addEventListener('DOMContentLoaded', () => {
       openModal('modal-reg');
     });
   }
-  const mobileMenu = document.querySelector('.mobile-menu');
 
+  // =========================
+  // Кнопки открытия модалок
+  // (работают и на десктопе, и в бургерном меню)
+  // =========================
   document.querySelectorAll('.open-reg, #openModalReg').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       openModal('modal-reg');
-      mobileMenu?.classList.remove('active');
+      mobileMenu?.classList.remove('active'); // закрываем меню при открытии модалки
     });
   });
 
@@ -65,21 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       openModal('modal-login');
-      mobileMenu?.classList.remove('active');
+      mobileMenu?.classList.remove('active'); // закрываем меню при открытии модалки
     });
-  });
-
-  // БУРГЕРНОЕ МЕНЮ
-
-  const burger = document.querySelector('.burger');
-  const closeBtn = document.querySelector('.close');
-
-  burger?.addEventListener('click', () => {
-    mobileMenu?.classList.add('active');
-  });
-
-  closeBtn?.addEventListener('click', () => {
-    mobileMenu?.classList.remove('active');
   });
 
 });

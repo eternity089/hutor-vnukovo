@@ -25,7 +25,7 @@
         <li><a href="gallery.html"> Галерея </a></li>
         <li><a href="contacts.html">Контакты</a></li>
         <div class="buttons">
-          <a class="modal mobile-offer main-offer href='cabinet.html'">Личный кабинет</a>
+          <a class="modal mobile-offer main-offer" href='cabinet.html'>Личный кабинет</a>
           <a class="modal mobile-offer secondary-main-offer" href="../index.html">Выход</a>
         </div>
       </nav>
@@ -44,8 +44,12 @@
         <li><a href="gallery.html">Галерея</a></li>
         <li><a href="contacts.html">Контакты</a></li>
         <div class="buttons">
-          <a class="modal mobile-offer main-offer href='cabinet.html'">Личный кабинет</a>
-          <a class="modal mobile-offer secondary-main-offer" href="../index.html">Выход</a>
+          <form action="cabinet.html">
+            <button class="modal mobile-offer main-offer" href='cabinet.html'>Личный кабинет</button>
+          </form>
+          <form action="../index.html">
+            <button class="modal mobile-offer secondary-main-offer" href="../index.html">Выход</button>
+          </form>
         </div>
       </nav>
     </div>
@@ -68,9 +72,9 @@
             </div>
           </div>
           <div class="data-info">
-            <input type="text" placeholder="Имя"  value="Иван">
-            <input type="text" placeholder="Фамилия"  value="Иванов">
-            <input type="tel"  placeholder="Телефон" value="+7 (900) 900 90 90">
+            <input type="text" placeholder="Имя" value="Иван">
+            <input type="text" placeholder="Фамилия" value="Иванов">
+            <input type="tel" placeholder="Телефон" value="+7 (900) 900 90 90">
             <input type="email" placeholder="Электронная почта" value="example@mail.com">
             <div class="buttons">
               <button class="secondary-main-offer">Изменить пароль</button>

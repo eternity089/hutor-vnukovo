@@ -55,6 +55,18 @@ h4{
   color: var(--h-color);
 }
 
+.nav-mobile .buttons{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.buttons form button{
+  width: 90vw;
+  font-size: 24px;
+}
+
 
 fieldset{
   display: flex;

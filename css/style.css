@@ -8,6 +8,9 @@
   --input-color:#674327;
   letter-spacing: 1px;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 ::-webkit-scrollbar{
   background-color: white;
@@ -57,6 +60,10 @@ h2 {
   line-height: 70px;
 }
 
+label{
+  color: var(--h-color);
+}
+
 p {
   font-size: 18px;
   line-height: 250%;
@@ -66,7 +73,7 @@ p {
 
 h3 {
   text-transform: unset;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: inter;
   font-weight: 400;
   font-size: 28px;
 }
@@ -110,29 +117,22 @@ h1 {
 }
 
 /* модальное окно */
-.modal-overlay, .success-overlay {
+.modal-overlay {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.5);
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  pointer-events: none;
   transition: opacity 0.3s ease;
   z-index: 1000;
-}
-
-.modal-overlay.active {
-  opacity: 1;
-  pointer-events: all;
 }
 
 .modal-window {
   background: white;
   padding: 30px;
   border-radius: 8px;
-  max-width: 500px;
+  max-width: 530px;
   width: 90%;
   transform: scale(0.9);
   transition: transform 0.3s ease;
@@ -155,20 +155,28 @@ h1 {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 
-.modal-content input{
+.checkout{
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  letter-spacing: normal;
+}
+
+.checkout a{
+  text-decoration: none;
+  font-size: 15px;
+}
+
+ input{
   padding: 15px 20px;
   font-size: 18px;
   border-radius: 50px;
   border: 1px solid var(--border-color);
 }
 
-.content-date-count{
-  display: flex;
-  gap: 60px;
-}
 
 .close-btn {
   position: absolute;
@@ -196,6 +204,12 @@ input::placeholder{
 
 input{
   color: var(--input-color);
+  font-family: inter;
+}
+
+
+textarea{
+  font-family: inter;
 }
 
 .check-content input[type='date']{
@@ -206,7 +220,7 @@ input{
 input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   background: url('../img/icons/calendar.svg') no-repeat right center;
-  background-size: 20px 20px;
+  background-size: 18px 18px;
 }
 
 input[type='date']{
@@ -233,7 +247,6 @@ input[type='date']{
 
 .modal-content a{
   color: var(--hover-color);
-  text-decoration: underline;
 }
 
 li,
@@ -259,12 +272,16 @@ a {
   
 }
 
+button{
+  font-family: inter;
+}
+
 a:hover::after{
   width: 100%;
 }
 
 .header-offer, .mobile-offer {
-  padding: 16px 24px;
+  padding: 12px 18px;
   background: #00000000;
   border-radius: 50px;
   border: 1px solid white;
@@ -274,15 +291,35 @@ a:hover::after{
   backdrop-filter: blur(4px);
 }
 
+.buttons a::after{
+  content: unset;
+  transition: unset;
+}
+
+.secondary-main-offer{
+  padding: 12px 18px;
+  background: #00000000;
+  border-radius: 50px;
+  border: 1px solid var(--border-color);
+  color: var(--h-color);
+  font-size: 18px;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+
+.secondary-main-offer:hover{
+  color: white;
+  background-color: var(--h-color);
+}
+
 .main-offer {
-  padding: 16px 32px;
+  padding: 12px 18px;
   background: var(--h-color);
   border-radius: 50px;
   border: 1px solid var(--h-color);
   color: white;
   font-size: 18px;
   cursor: pointer;
-  font-family: Inter;
 
 }
 
@@ -295,7 +332,11 @@ a:hover::after{
   color: black;
 }
 
-input[type="date"]{
+input[type="date"], input[type="number"]{
+  width: 250px;
+  padding: 15px 15px;
+  border-radius: 100px;
+  border: 1px solid var(--border-color);
   background: white;
 }
 
@@ -319,7 +360,7 @@ header {
   background: #00000018;
 
 }
-
+/* бургерное меню, адаптация под мобильные устройства */
 .burger {
   display: none;
   background: none;
@@ -362,7 +403,7 @@ header {
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: opacity 0.4s ease;
-  z-index: 999;
+  z-index: 900;
 }
 
 .mobile-menu.active ~ .overlay {
@@ -379,11 +420,10 @@ header {
   top: 0;
   right: -100%;
   width: 50vw;
-  height: 100vh;
+  height: 150vh;
   background: white;
   transition: right 0.4s ease;
   z-index: 1000;
-  border-left: 1px solid var(--border-color);
 }
 
 .mobile-menu.active {
@@ -404,13 +444,18 @@ header {
   text-decoration: none;
   color: var(--h-color);
 }
-
+/* шапка, пк версия */
 
 .header {
   width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.header .buttons{
+  margin-left: 10vw;
+  display: flex;
+  gap: 2vw;
 }
 
 header img,
@@ -475,7 +520,7 @@ main {
     font-size: 16px;
   }
   header nav,
-  header .header-offer {
+  header .header-offer, .header .buttons {
     display: none;
   }
 
@@ -491,11 +536,18 @@ main {
   .nav-mobile{
     gap: 8vh;
   }
+  .header{
+    padding: 10px;
+  }
+  header img{
+    width: 40px;
+    height: 40px;
+  }
   header{
     padding: 0;
   }
   .mobile-menu{
-    width: 80vw;
+    width: 100vw;
   }
   main{
     gap: 40px;
@@ -831,7 +883,7 @@ footer {
 .footer-container {
   width: 90%;
   display: flex;
-  gap: 240px;
+  gap: 15vw;
 }
 .footer{
   width: 100%;
@@ -852,6 +904,10 @@ footer nav {
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+.footer .header-offer::after{
+  all: unset;
+  transition: none;
 }
 
 .footer-info{
@@ -894,7 +950,7 @@ footer nav {
 
 @media (max-width: 480px) {
   .footer-container{
-    gap: 10vw;
+    gap: 20vw;
   }
   .footer{
     width: fit-content;

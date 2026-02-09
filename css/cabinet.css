@@ -1,0 +1,315 @@
+fieldset{
+  width: 505px;
+  border: 1px solid var(--input-color);
+}
+
+input[type='radio'], input[type='checkbox']{
+  accent-color: var(--input-color);
+}
+legend{
+  color: var(--input-color);
+
+}
+main{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+section{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+span{
+  color: var(--input-color);
+}
+section article{
+  width: 50%;
+}
+
+textarea{
+  border: 1px solid var(--h-color);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+h3{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+h4{
+  font-size: 20px;
+  font-family: inter;
+  font-weight: 400;
+  color: var(--h-color);
+}
+
+
+fieldset{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+}
+fieldset p{
+  color: var(--input-color);
+}
+h3{
+  margin: 0;
+}
+article{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.history{
+  border-radius: 10px;
+  display: flex;
+  width: max-content;
+  max-width: 95vw;
+  flex-direction: column;
+  padding: 15px;
+  border: 1px solid var(--input-color);
+}
+#houseBlock .flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.booking-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.booking-form .main-offer{
+  margin-top: 2vh;
+}
+
+fieldset div label{
+  padding-left: 10px;
+}
+
+.status-new{
+  color: rgb(34, 131, 192);
+}
+
+.status-end{
+  color: green;
+}
+
+.status-canceled, .delete-photo{
+  color: red;
+}
+
+.review-form {
+  max-width: 500px;
+}
+
+.rating {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+label textarea{
+  min-width: 450px;
+  max-width: 500px;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+.stars input {
+  display: none;
+}
+
+.stars label {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-image: url("../img/icons/star-empty.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 0.2s;
+}
+
+/* Наведение */
+.stars label:hover,
+.stars label:hover ~ label {
+  background-image: url("../img/icons/star-full.svg");
+}
+
+/* Выбранное состояние */
+.stars input:checked ~ label {
+  background-image: url("../img/icons/star-full.svg");
+}
+
+.data-info input{
+  width: 600px;
+}
+
+.user-data{
+  width: 100%;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.user-info{
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.data-info{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.buttons{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.avatar-img{
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: url('../img/Avatar.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.avatar{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.photo-edit{
+  display: flex;
+  gap: 3vw;
+  margin-top: 3vh;
+}
+.change-photo {
+  color: grey;
+  cursor: pointer;
+}
+
+.change-photo:hover {
+  text-decoration: none;
+}
+
+
+article .main-offer{
+  margin-top: 30px;
+}
+
+@media (max-width:768px) {
+  h2{
+    text-align: center;
+  }
+
+  .avatar-img{
+    width: 300px;
+    height: 300px;
+  }
+  section{
+    gap: 60px;
+  }
+  section article{
+    width: fit-content;
+  }
+  .user-info{
+    width: fit-content;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+  }
+  fieldset, .history{
+    width: 80vw;
+  }
+}
+
+@media (max-width: 480px) {
+  main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  section{
+    width: 88%;
+  }
+  .avatar-img{
+    width: 200px;
+    height: 200px;
+  }
+
+  .secondary-main-offer, .main-offer{
+    padding: 12px 12px;
+    font-size: 14px;
+  }
+
+  .data-info input{
+    width: 90vw;
+  }
+
+  label textarea{
+    min-width: 75vw;
+    max-width: 80vw;
+  }
+
+  .history h3{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 16px;
+  }
+  .status-new, .status-canceled, .status-end{
+    font-size: 16px;
+  }
+
+  #houseBlock .flex{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;  
+    flex-wrap: wrap;
+  }
+
+   .data-info input, input[type="date"],  input[type="number"]{
+    padding: 8px 12px;
+    font-size: 16px;
+    max-width: 300px;
+  }
+
+  .buttons{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .buttons button{
+    width: 100%;
+  }
+}

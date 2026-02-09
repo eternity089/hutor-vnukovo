@@ -14,6 +14,17 @@ button{
   letter-spacing: 1px;
 }
 
+.burger span,
+.burger span::before,
+.burger span::after {
+  width: 25px;
+  background: var(--h-color);
+  height: 3px;
+  display: block;
+  position: relative;
+  transition: 0.3s;
+}
+
 
 header li a{
   font-weight: 300;
@@ -29,4 +40,8 @@ main{
   main{
     margin-top: 80px;
   }
+}
+
+footer{
+  margin-top: 60px;
 }

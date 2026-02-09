@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="../css/header-footer.css">
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <img src="../img/logo.png" alt="logo">
+      <button class="burger" aria-label="Открыть меню">
+        <span></span>
+      </button>
+      <nav>
+        <li><a href="price.html">Услуги </a></li>
+        <li><a href="rules.html"> Правила </a></li>
+        <li><a href="history.html"> История </a></li>
+        <li><a href="gallery.html"> Галерея </a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </nav>
+      <div class="buttons">
+        <form action="../index.html">
+          <button class="modal mobile-offer main-offer">Выход</button>
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-menu-container">
+    <div class="mobile-menu">
+      <div class="close">
+        <button class="close close-btn"><img src="../img/icons/close.png" alt=""></button>
+      </div>
+      <nav class="nav-mobile">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="price.html">Услуги</a></li>
+        <li><a href="rules.html">Правила</a></li>
+        <li><a href="history.html">История</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <div class="buttons">
+          <form action="../index.html">
+            <button class="modal mobile-offer main-offer">Выход</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <main>
+    <h2>Панель администратора</h2>
+    <h3>Управление посещениями</h3>
+    <form action="">
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Пользователь</th>
+              <th>Электронная почта</th>
+              <th>Тип посещения</th>
+              <th>Длительность аренды бани</th>
+              <th>Купель</th>
+              <th>Количество гостей (дом)</th>
+              <th>Дата заезда</th>
+              <th>Дата выезда(дом)</th>
+              <th class="commit">Комментарий</th>
+              <th>Статус</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Иван Иванов</td>
+              <td>example@mail.com</td>
+              <td>дом, баня</td>
+              <td>3 часа</td>
+              <td>Горячая</td>
+              <td>6</td>
+              <td>11.11.2025</td>
+              <td>13.11.2025</td>
+              <td><p>Это комментарий с пожеланиями</p></td>
+              <td><select name="" id="">
+                  <option value="">Новая</option>
+                  <option value="">Подтверждена</option>
+                  <option value="">Отменена</option>
+                  <option value="">Посещена</option>
+                </select></td>
+            </tr>
+            <tr>
+              <td>Иван Иванов</td>
+              <td>example@mail.com</td>
+              <td>дом, баня</td>
+              <td>3 часа</td>
+              <td>Горячая</td>
+              <td>6</td>
+              <td>11.11.2025</td>
+              <td>13.11.2025</td>
+              <td><p>Это комментарий с пожеланиями</p></td>
+              <td><select name="" id="">
+                <option value="">Подтверждена</option>
+                  <option value="">Новая</option>
+                  <option value="">Отменена</option>
+                  <option value="">Посещена</option>
+                </select></td>
+            </tr>
+            <tr>
+              <td>Иван Иванов</td>
+              <td>example@mail.com</td>
+              <td>дом, баня</td>
+              <td>3 часа</td>
+              <td>Горячая</td>
+              <td>6</td>
+              <td>11.11.2025</td>
+              <td>13.11.2025</td>
+              <td><p>Это комментарий с пожеланиями</p></td>
+              <td><select name="" id="">
+                <option value="">Отменена</option>
+                  <option value="">Новая</option>
+                  <option value="">Подтверждена</option>
+                  <option value="">Посещена</option>
+                </select></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </form>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <img src="../img/logo.png" alt="logo">
+      <div class="footer">
+
+        <nav>
+          <li><a href="../index.html">Главная</a></li>
+          <li><a href="price.html">Услуги</a></li>
+          <li><a href="rules.html">Правила</a></li>
+        </nav>
+        <nav>
+          <li><a href="history.html">История</a></li>
+          <li><a href="gallery.html">Галерея</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </nav>
+        <a href="#top" class="header-offer">Наверх</a>
+      </div>
+    </div>
+    <div class="footer-info">
+      <div class="vk-group">
+        <img src="../img/icons/vk.png" alt="">
+        <a href="https://vk.com/hutor_vnukovo?from=groups">Мы ВКонтакте</a>
+      </div>
+      <p>©Хутор Внуково, 2026г.</p>
+    </div>
+  </footer>
+  <script src="../js/modal.js"></script>
+</body>
+
+</html>

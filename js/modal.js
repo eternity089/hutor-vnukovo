@@ -1,63 +1,72 @@
-// Кнопки, которые открывают форму бронирования
-document.querySelectorAll('.modal').forEach(btn => {
-  btn.addEventListener('click', () => {
-    openModal('modal-template', 'modal');
-  });
-});
+document.addEventListener('DOMContentLoaded', () => {
 
-function openModal(templateId, modalId) {
-  let modal = document.getElementById(modalId);
+  /**
+   * Универсальная функция открытия модального окна
+   * @param {string} templateId - id template
+   */
+  function openModal(templateId) {
+    // если уже есть модалка — закрываем
+    const existingModal = document.querySelector('.modal-overlay');
+    if (existingModal) existingModal.remove();
 
-  // если модалки ещё нет — создаём из template
-  if (!modal) {
     const template = document.getElementById(templateId);
-    const clone = template.content.cloneNode(true);
-    document.body.appendChild(clone);
+    if (!template) {
+      console.error(`Template ${templateId} не найден`);
+      return;
+    }
 
-    modal = document.getElementById(modalId);
+    const fragment = template.content.cloneNode(true);
+    const modal = fragment.querySelector('.modal-overlay');
+    const closeBtn = fragment.querySelector('.close-btn');
 
-    // закрытие по клику на крестик
-    modal.querySelectorAll('.close').forEach(btn => {
-      btn.addEventListener('click', () => closeModal(modalId));
+    if (!modal || !closeBtn) {
+      console.error('Модальное окно собрано некорректно');
+      return;
+    }
+
+    document.body.appendChild(fragment);
+
+    // закрытие по кнопке
+    closeBtn.addEventListener('click', () => {
+      modal.remove();
     });
 
     // закрытие по клику на оверлей
-    modal.addEventListener('click', e => {
-      if (e.target === modal) closeModal(modalId);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.remove();
+      }
     });
 
-    // логика формы
-    if (modalId === 'modal') {
-      const form = modal.querySelector('#form');
+    // переход на логин
+    modal.querySelector('.to-login')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.remove();
+      openModal('modal-login');
+    });
 
-      form.addEventListener('submit', e => {
-        e.preventDefault();
-
-        if (!form.checkValidity()) {
-          form.reportValidity();
-          return;
-        }
-
-        closeModal('modal');
-
-        // открываем success-модалку
-        openModal('modal-success-template', 'modal-success');
-      });
-    }
+    // переход на регистрацию
+    modal.querySelector('.to-register')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.remove();
+      openModal('modal-reg');
+    });
   }
 
-  // плавное появление
-  requestAnimationFrame(() => {
-    modal.classList.add('active');
+  // кнопка открытия регистрации
+  const openRegBtn = document.getElementById('openModalReg');
+  openRegBtn?.addEventListener('click', () => {
+    openModal('modal-reg');
   });
-}
 
-function closeModal(modalId) {
-  const modal = document.getElementById(modalId);
-  if (!modal) return;
+  // кнопка открытия логина
+  const openLoginBtn = document.getElementById('openModalLogin');
+  openLoginBtn?.addEventListener('click', () => {
+    openModal('modal-login');
+  });
 
-  modal.classList.remove('active');
-}
+});
+
 
 
 // бургерное меню

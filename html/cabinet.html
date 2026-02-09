@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Личный кабинет</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/cabinet.css">
+  <link rel="stylesheet" href="../css/header-footer.css">
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <img src="../img/logo.png" alt="logo">
+      <button class="burger" aria-label="Открыть меню">
+        <span></span>
+      </button>
+      <nav>
+        <li><a href="price.html">Услуги </a></li>
+        <li><a href="rules.html"> Правила </a></li>
+        <li><a href="history.html"> История </a></li>
+        <li><a href="gallery.html"> Галерея </a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <div class="buttons">
+          <a class="modal mobile-offer main-offer href='cabinet.html'">Личный кабинет</a>
+          <a class="modal mobile-offer secondary-main-offer" href="../index.html">Выход</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="mobile-menu-container">
+    <div class="mobile-menu">
+      <div class="overlay"></div>
+      <div class="close">
+        <button class="close close-btn"><img src="../img/icons/close.png" alt=""></button>
+      </div>
+      <nav class="nav-mobile">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="price.html">Услуги</a></li>
+        <li><a href="rules.html">Правила</a></li>
+        <li><a href="history.html">История</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+
+        <button class="modal mobile-offer main-offer" id="openModalReg">Личный кабинет</button>
+        <button class="modal mobile-offer main-offer" id="openModalLogin">Выход</button>
+      </nav>
+    </div>
+  </div>
+  <main>
+    <section>
+      <div class="user-data">
+        <h2>Личный кабинет</h2>
+        <div class="user-info">
+          <div class="avatar">
+            <div class="avatar-img"></div>
+            <div class="photo-edit">
+              <input type="file" id="avatar" name="avatar" accept="image/*" hidden>
+              <a href="#" class="change-photo">
+                <label for="avatar" class="change-photo">
+                  Изменить фото
+                </label>
+              </a>
+              <a href="#" class="delete-photo">Удалить фото</a>
+            </div>
+          </div>
+          <div class="data-info">
+            <input type="text" placeholder="Имя"  value="Иван">
+            <input type="text" placeholder="Фамилия"  value="Иванов">
+            <input type="tel"  placeholder="Телефон" value="+7 (900) 900 90 90">
+            <input type="email" placeholder="Электронная почта" value="example@mail.com">
+            <div class="buttons">
+              <button class="secondary-main-offer">Изменить пароль</button>
+              <button class="main-offer">Сохранить изменения</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <form class="booking-form" method="post" action="">
+        <legend>
+          <h2>новое посещение</h2>
+        </legend>
+        <div class="form-container">
+
+          <!-- 1. Тип бронирования -->
+          <fieldset>
+            <legend>Тип бронирования</legend>
+
+            <label>
+              <input type="checkbox" name="booking_type[]" value="bath" id="bathCheckbox">
+              Аренда бани
+            </label>
+
+            <label>
+              <input type="checkbox" name="booking_type[]" value="house" id="houseCheckbox">
+              Аренда домика
+            </label>
+          </fieldset>
+
+          <!-- 2. БЛОК БАНИ -->
+          <fieldset id="bathBlock">
+            <legend>Баня</legend>
+            <div>
+              <p>Продолжительность:</p>
+              <label><input type="radio" name="bath_duration" value="2"> 2 часа</label>
+              <label><input type="radio" name="bath_duration" value="3"> 3 часа</label>
+              <label><input type="radio" name="bath_duration" value="4"> 4 часа</label>
+            </div>
+            <div>
+              <p>Купель:</p>
+              <label><input type="checkbox" name="bath_pool[]" value="hot"> Горячая</label>
+              <label><input type="checkbox" name="bath_pool[]" value="cold"> Холодная</label>
+              <label><input type="checkbox" name="bath_pool[]" value="filled"> С наполнением</label>
+            </div>
+            <div>
+              <p>Дополнительные услуги:</p>
+              <label><input type="checkbox" name="bath_services[]" value="steaming"> Парение</label>
+              <label><input type="checkbox" name="bath_services[]" value="program"> Программа парения</label>
+            </div>
+            <div>
+              <p>Веники:</p>
+              <label><input type="checkbox" name="brooms[]" value="birch"> Берёза</label>
+              <label><input type="checkbox" name="brooms[]" value="oak"> Дуб</label>
+              <label><input type="checkbox" name="brooms[]" value="fir"> Пихта</label>
+            </div>
+          </fieldset>
+
+          <!-- 3. БЛОК ДОМИКА -->
+          <fieldset id="houseBlock">
+            <legend>Домик</legend>
+            <label class="flex">
+              Дата заезда:
+              <input type="date" name="check_in">
+            </label><br>
+            <label class="flex">
+              Дата выезда:
+              <input type="date" name="check_out">
+            </label><br>
+            <label class="flex">
+              Количество гостей:
+              <input type="number" name="guests" min="1" max="6" value="2">
+            </label>
+
+            <p>Дополнительно:</p>
+            <div class="flex">
+              <label>
+                <input type="checkbox" name="house_options[]" value="extra_bed">
+                Дополнительное место
+              </label>
+              <label>
+                <input type="checkbox" name="house_options[]" value="pets">
+                Буду с животными
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- 4. Комментарий -->
+          <fieldset>
+            <legend>Комментарий</legend>
+            <textarea name="comment" rows="4" placeholder="Пожелания или вопросы"></textarea>
+          </fieldset>
+
+        </div>
+        <!-- 5. Итог -->
+        <button type="submit" class="main-offer">
+          Отправить заявку
+        </button>
+
+      </form>
+      <article>
+        <h2>История посещений</h2>
+        <div class="history">
+          <h3>Дата посещения: <span>17.03.2026</span><span class="status-new">Новая</span></h3>
+        </div>
+        <div class="history">
+          <h3>Дата посещения: <span>11.11.2025</span> <span class="status-canceled">Отменено</span></h3>
+        </div>
+        <div class="history">
+          <h3>Дата посещения: <span>10.11.2025</span> <span class="status-end">Завершено</span></h3>
+          <form class="review-form" method="post" action="">
+            <h4>Оставьте отзыв о посещении:</h4>
+            <!-- Рейтинг -->
+            <div class="rating">
+              <span>Оценка:</span>
+              <div class="stars">
+                <input type="radio" id="star5" name="rating" value="5" required>
+                <label for="star5" title="Отлично"></label>
+
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4" title="Хорошо"></label>
+
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3" title="Нормально"></label>
+
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2" title="Плохо"></label>
+
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1" title="Очень плохо"></label>
+              </div>
+            </div>
+            <!-- Текст отзыва -->
+            <label>
+              Ваш отзыв:
+              <textarea name="review_text" placeholder="Поделитесь впечатлениями" required></textarea>
+            </label>
+            <!-- Кнопка -->
+            <button type="submit" class="main-offer">Отправить отзыв</button>
+          </form>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <img src="../img/logo.png" alt="logo">
+      <div class="footer">
+
+        <nav>
+          <li><a href="../index.html">Главная</a></li>
+          <li><a href="price.html">Услуги</a></li>
+          <li><a href="rules.html">Правила</a></li>
+        </nav>
+        <nav>
+          <li><a href="history.html">История</a></li>
+          <li><a href="gallery.html">Галерея</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </nav>
+        <a href="#top" class="header-offer">Наверх</a>
+      </div>
+    </div>
+    <div class="footer-info">
+      <div class="vk-group">
+        <img src="../img/icons/vk.png" alt="">
+        <a href="https://vk.com/hutor_vnukovo?from=groups">Мы ВКонтакте</a>
+      </div>
+      <p>©Хутор Внуково, 2026г.</p>
+    </div>
+  </footer>
+  <script src="../js/modal.js"></script>
+</body>
+
+</html>

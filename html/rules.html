@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/contacts.css">
+  <link rel="stylesheet" href="../css/header-footer.css">
+  <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <img src="../img/logo.png" alt="logo">
+      <button class="burger" aria-label="Открыть меню">
+        <span></span>
+      </button>
+      <nav>
+        <li><a href="price.html">Услуги </a></li>
+        <li><a href="rules.html"> Правила </a></li>
+        <li><a href="history.html"> История </a></li>
+        <li><a href="gallery.html"> Галерея </a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </nav>
+      <div class="buttons">
+        <button class="modal mobile-offer main-offer" id="openModalReg">Регистрация</button>
+        <button class="modal mobile-offer main-offer" id="openModalLogin">Авторизация</button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-menu-container">
+    <div class="mobile-menu">
+      <div class="close">
+        <button class="close close-btn"><img src="../img/icons/close.png" alt=""></button>
+      </div>
+      <nav class="nav-mobile">
+        <li><a href="../index.html">Главная</a></li>
+        <li><a href="price.html">Услуги</a></li>
+        <li><a href="rules.html">Правила</a></li>
+        <li><a href="history.html">История</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <div class="buttons">
+          <button class="modal mobile-offer main-offer" id="openModalReg">Регистрация</button>
+          <button class="modal mobile-offer main-offer" id="openModalLogin">Авторизация</button>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <template id="modal-reg">
+    <div class="modal-overlay modal">
+      <div class="modal-window">
+        <div class="modal-header">
+          <h2>Регистрация</h2>
+          <button class="close close-btn closeBtn"><img src="../img/icons/close.png" alt=""></button>
+        </div>
+        <div class="modal-content">
+          <form action="" id="form">
+            <input type="text" name="surname" placeholder="Фамилия" required>
+            <input type="text" name="name" placeholder="Имя" required>
+            <input type="email" name="email" id="" placeholder="Электронная почта" required>
+            <input type="password" name="pass" id="" placeholder="Пароль" required>
+            <input type="password" name="pass_repeat" id="" placeholder="Подтвердите пароль" required>
+            <div class="checkout">
+              <label for=""><input type="checkbox" name="rules" id="">Согласен(на) с правилами регистрации</label>
+              <a href="#" class="to-login">У меня уже есть аккаунт</a>
+            </div>
+            <form action="cabinet.html">
+              <button class="main-offer" type="submit">Зарегистрироваться</button>
+            </form>
+          </form>
+        </div>
+      </div>
+    </div>
+  </template>
+  <template id="modal-login">
+    <div class="modal-overlay modal">
+      <div class="modal-window">
+        <div class="modal-header">
+          <h2>Авторизация</h2>
+          <button class="close close-btn closeBtn"><img src="../img/icons/close.png" alt=""></button>
+        </div>
+        <div class="modal-content">
+          <form action="" id="form">
+            <input type="email" name="email" id="" placeholder="Электронная почта" required>
+            <input type="password" name="pass" id="" placeholder="Пароль" required>
+            <div class="checkout">
+              <a href="#" class="to-register">У меня еще нет аккаунта</a>
+              <a href="#">Забыли пароль?</a>
+            </div>
+            <form action="admin.html">
+              <button class="main-offer" type="submit">Войти</button>
+            </form>
+          </form>
+        </div>
+      </div>
+    </div>
+  </template>
+  <main>
+    <nav class="breadcrumbs">
+      <a href="../index.html">Главная</a>
+      <span>/</span>
+      <span class="current">Правила</span>
+    </nav>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <img src="../img/logo.png" alt="logo">
+      <div class="footer">
+
+        <nav>
+          <li><a href="../index.html">Главная</a></li>
+          <li><a href="price.html">Услуги</a></li>
+          <li><a href="rules.html">Правила</a></li>
+        </nav>
+        <nav>
+          <li><a href="history.html">История</a></li>
+          <li><a href="gallery.html">Галерея</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </nav>
+        <a href="#top" class="header-offer">Наверх</a>
+      </div>
+    </div>
+    <div class="footer-info">
+      <div class="vk-group">
+        <img src="../img/icons/vk.png" alt="">
+        <a href="https://vk.com/hutor_vnukovo?from=groups">Мы ВКонтакте</a>
+      </div>
+      <p>©Хутор Внуково, 2026г.</p>
+    </div>
+  </footer>
+  <script src="../js/modal.js"></script>
+</body>
+
+</html>

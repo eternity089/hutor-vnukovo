@@ -53,32 +53,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // кнопка открытия регистрации
-  const openRegBtn = document.getElementById('openModalReg');
-  openRegBtn?.addEventListener('click', () => {
-    openModal('modal-reg');
+  // =========================
+  // КНОПКИ ОТКРЫТИЯ МОДАЛОК
+  // (десктоп + бургер)
+  // =========================
+
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  document.querySelectorAll('.open-reg, #openModalReg').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal('modal-reg');
+      mobileMenu?.classList.remove('active');
+    });
   });
 
-  // кнопка открытия логина
-  const openLoginBtn = document.getElementById('openModalLogin');
-  openLoginBtn?.addEventListener('click', () => {
-    openModal('modal-login');
+  document.querySelectorAll('.open-login, #openModalLogin').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal('modal-login');
+      mobileMenu?.classList.remove('active');
+    });
   });
 
-});
+  // =========================
+  // БУРГЕРНОЕ МЕНЮ
+  // =========================
 
+  const burger = document.querySelector('.burger');
+  const closeBtn = document.querySelector('.close');
 
+  burger?.addEventListener('click', () => {
+    mobileMenu?.classList.add('active');
+  });
 
-// бургерное меню
+  closeBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.remove('active');
+  });
 
-const burger = document.querySelector('.burger');
-const mobileMenu = document.querySelector('.mobile-menu');
-const closeBtn = document.querySelector('.close');
-
-burger.addEventListener('click', () => {
-  mobileMenu.classList.add('active');
-});
-
-closeBtn.addEventListener('click', () => {
-  mobileMenu.classList.remove('active');
 });

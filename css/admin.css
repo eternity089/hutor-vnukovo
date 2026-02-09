@@ -6,7 +6,7 @@ main{
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
 }
 
@@ -17,9 +17,13 @@ main{
 .history-container{
   width: 90vw;
 }
+h2{
+  text-align: center;
+}
 
 h3{
   color: var(--h-color);
+  text-align: center;
 }
 main p{
   width: 100%;
@@ -33,6 +37,7 @@ ol, ol> li{
 }
 
 table {
+  margin: 0 auto;
 	width: 100%;
 	margin-bottom: 20px;
 	border: 1px solid var(--border-color);
